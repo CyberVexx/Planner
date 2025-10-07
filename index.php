@@ -16,16 +16,9 @@ if (isset($_GET['title'])) {
 
 }
 
-
 if (empty($_SESSION['items'])) {
     $_SESSION['items'] = ['ToDo', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', ''];
 }
-
-// if(!isset($_SESSION['coltitle'])) {
-//     $coltitle = 'Todo'
-
-// }
-
 
 $colitems = $_SESSION['items'];
 
