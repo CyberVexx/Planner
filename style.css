@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+:root {
+    --main-font: Orbitron, sans-serif;
+
+    --chinese-black-color: #0a1123;
+    --american-blue-color: #3a3e6c;
+    --ube-color: #8387c3;
+    --cool-gray-color: #8a8cac;
+    --cadet-gray-color: #959bb5;
+}
+
+body {
+    background-color: var(--american-blue-color);
+    font-family: var(--main-font);
+}
+
+legend {
+    margin: auto;
+}
+
+h1 {
+    color: transparent;
+    text-align: center;
+    -webkit-text-stroke: 2px var(--cadet-gray-color);
+    text-transform: uppercase;
+}
+
+h1 span {
+    text-transform: lowercase;
+}
+
+#flex-container {
+    display: flex;
+    justify-content: start;
+    border: 2px solid black;
+    height: 75vh;
+    gap: 1rem;
+}
+
+#flex-container > .flex-item {
+    background-color: var(--ube-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid var(--cadet-gray-color);
+    border-radius: 1.5rem;
+    flex: 1;
+    position: relative;
+}
+
+.post-it {
+    background-color: yellow;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 1.5rem;
+    width: 80%;
+    box-shadow: 2px 4px 6px rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.post-it.expanded {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    width: 250px;
+    min-height: 150px;
+    z-index: 10;
+    box-shadow: 6px 10px 15px rgba(0,0,0,0.3);
+    opacity: 1;
+    max-height: 300px;
+}
+
+@media screen and (max-width: 600px) {
+    #flex-container {
+        flex-direction: column;
+        height: auto;   
+    }
+}
+
+/* Center the form on the page */
+form {
+  max-width: 500px;
+  margin: 5rem auto; /* centers horizontally + adds top spacing */
+  padding: 2rem;
+  background-color: var(--accent-color, #2c3e50); /* uses your theme color */
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
+  color: var(--main-font-color, #ecf0f1);
+  font-family: 'Orbitron', sans-serif; /* futuristic vibe */
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Each form group stacks label + input */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.form-group label {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--main-font-color, #ecf0f1);
+}
+
+/* Inputs and textareas */
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  background-color: rgba(0, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.4);
+}
+
+/* Textarea height */
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Submit button */
+input[type="submit"] {
+  background-color: #00ffff;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+  text-transform: uppercase;
+  align-self: center;
+}
+
+input[type="submit"]:hover {
+  background-color: #06c6c6;
+  box-shadow: 0 0 15px #00ffff;
+} 
