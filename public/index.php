@@ -16,7 +16,9 @@ $title = "<h1>Plann<span>i</span>ng</h1>";
 
 if (isset($_POST['deletePostIt'])) {
     $postItManager = new PostItManager();
-    $postItManager->removePostIt($_POST['postItId']);
+    // cast naar een int! (anders is het een string)
+    $postItId = (int)$_POST['postItId'];
+    $postItManager->removePostIt($postItId);
 }
 ?>
 
