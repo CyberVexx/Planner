@@ -38,33 +38,34 @@ if (isset($_POST['deletePostIt'])) {
 </head>
 
 <body>
-    <fieldset>
-        <legend><?php echo $title; ?></legend>
+<fieldset>
+    <legend><?php echo $title; ?></legend>
 
-        <div id="flex-container">
-            <?php
-            $postItArray = $_SESSION['postIts'];
-            foreach ($_SESSION['items'] as $col) {
-                echo '<div class="flex-item">';
-                if (!empty($postItArray)) {
-                    foreach ($postItArray as $postIt) {
-                        $postIt->render();
-                    }
+    <div id="flex-container">
+        <?php
+        $postItArray = $_SESSION['postIts'];
+        foreach ($_SESSION['items'] as $col) {
+            echo "<div class='flex-item'>
+                    <h2>$col</h2>";
+            if (!empty($postItArray)) {
+                foreach ($postItArray as $postIt) {
+                    $postIt->render();
                 }
-                echo '</div>';
             }
+            echo '</div>';
+        }
 
-            ?>
+        ?>
 
 
-        </div>
-    </fieldset>
+    </div>
+</fieldset>
 
-    <button>
-        <a href="addOrEdit.php">Add new post it</a>
-    </button>
+<button>
+    <a href="addOrEdit.php">Add new post it</a>
+</button>
 
-    <script src="js/app.js"></script>
+<script src="js/app.js"></script>
 </body>
 
 </html>
