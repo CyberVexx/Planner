@@ -2,7 +2,6 @@
 
 :root {
     --main-font: Orbitron, sans-serif;
-
     --chinese-black-color: #0a1123;
     --american-blue-color: #3a3e6c;
     --ube-color: #8387c3;
@@ -12,7 +11,7 @@
 
 body {
     background-color: var(--american-blue-color);
-    font-family: var(--main-font);
+    font-family: var(--main-font), serif;
 }
 
 legend {
@@ -89,10 +88,10 @@ form {
   max-width: 500px;
   margin: 5rem auto; /* centers horizontally + adds top spacing */
   padding: 2rem;
-  background-color: var(--accent-color, #2c3e50); /* uses your theme color */
+  background-color: #2c3e50; /* uses your theme color */
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
-  color: var(--main-font-color, #ecf0f1);
+  color: #ecf0f1;
   font-family: 'Orbitron', sans-serif; /* futuristic vibe */
   display: flex;
   flex-direction: column;
@@ -111,7 +110,7 @@ form {
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: var(--main-font-color, #ecf0f1);
+  color: #ecf0f1;
 }
 
 /* Inputs and textareas */
