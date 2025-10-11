@@ -31,6 +31,10 @@ class PostIt
                 <p>$this->date</p>
                 <form method='post'>
                     <input name='postItId' type='hidden' value='$this->id'>
+                    <button name='editPostIt' type='submit'>Edit</button>
+                </form>
+                <form method='post'>
+                    <input name='postItId' type='hidden' value='$this->id'>
                     <button name='deletePostIt' type='submit'>Delete</button>
                 </form>
             </div>";

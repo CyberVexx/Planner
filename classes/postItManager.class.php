@@ -27,6 +27,16 @@ class PostItManager
         $_SESSION['lastPostItId'] = $this->lastId;
     }
 
+    public function getPostItById($postItId)
+    {
+        foreach ($this->postIts as $p) {
+            if ($p->getId() === $postItId) {
+                return $p;
+            }
+        }
+        return null;
+    }
+
     public function editPostIt($postItId, $formData) {
 
         foreach ($this->postIts as $existingPostIt) {
@@ -43,7 +53,6 @@ class PostItManager
         $this->postIts = array_values(array_filter($this->postIts, function($p) use ($postItId) {
             return $p->getId() !== $postItId;
         }));
-        var_dump($this->postIts);
         $this->applyArrayToSession();
     }
 

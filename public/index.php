@@ -14,6 +14,12 @@ $colItems = $_SESSION['items'];
 
 $title = "<h1>Plann<span>i</span>ng</h1>";
 
+if (isset($_POST['editPostIt'])) {
+    $postItId = (int)$_POST['postItId'];
+    header("Location: addOrEdit.php?postItId=$postItId");
+    exit;
+}
+
 if (isset($_POST['deletePostIt'])) {
     $postItManager = new PostItManager();
     // cast naar een int! (anders is het een string)
@@ -55,7 +61,7 @@ if (isset($_POST['deletePostIt'])) {
     </fieldset>
 
     <button>
-        <a href="crud/add.php">Add new post it</a>
+        <a href="addOrEdit.php">Add new post it</a>
     </button>
 
     <script src="js/app.js"></script>
